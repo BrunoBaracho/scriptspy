@@ -3,7 +3,7 @@ import keyboard
 import time
 
 is_running = False
-current_key = 'a'
+current_key = 's'
 
 def toggle():
     global is_running
@@ -14,13 +14,12 @@ while True:
     if is_running:
         pyautogui.mouseDown(button='left')
         pyautogui.keyDown(current_key)
-        time.sleep(77)
+        time.sleep(13)
         pyautogui.keyUp(current_key)
         if current_key == 'a':
-            pyautogui.keyDown('space')
-            pyautogui.keyUp('space')
-            current_key = 'd'
+            pyautogui.keyDown('d')
+            time.sleep(1)
+            pyautogui.keyUp('d')
+            current_key = 's'
         else:
-            pyautogui.keyDown('space')
-            pyautogui.keyUp('space')
             current_key = 'a'
